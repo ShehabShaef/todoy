@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+
+/* general styles */
+body {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+html{
+    font-family: "Saira",Serif;
+}
+
+/*the main card styles*/
+section {
+    width: 40vw;
+    height: 70vh;
+    background-color: white;
+    border-radius: 2.5%;
+    box-shadow: 14px 13px 36px 4px rgba(0, 0, 0, 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*the title styles*/
+.title{
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 0.7rem 1.3rem;
+    background-color: #243b55;
+    border-radius: 24px;
+    margin-top: 3rem;
+}
+
+/*the input styles*/
+/*    the background styles*/
+.inp{
+    width: 75%;
+    height: fit-content;
+    background-color: #CED5DD;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 25%); /* Todo: make it dynmic when it hoverd*/
+}
+/* center the items*/
+form{
+    display: flex;
+    flex-direction: column;
+}
+/*the input text styles*/
+#iputext{
+    width: 100%;
+    margin-right: auto;
+    border: none;
+    background: none;
+    font-family: "Saira", Serif;
+    font-size: 1rem;
+    color: rgba(45, 45, 45, 0.38);
+}
+#iputext:focus-visible{
+    outline: none;
+}
+/*the submit button styles*/
+#ipusubmit{
+    margin-left: auto;
+    border: none;
+    padding: 1rem;
+    border-radius: 3rem;
+    background: #243b55;
+    color: white;
+    font-size: 1rem;
+}
+

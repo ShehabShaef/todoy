@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Todoy</title>
+</head>
+<body>
+<section>
+<!--    nav tag for the title-->
+    <nav>
+        <p class="title">Todoy</p>
+    </nav>
+<!--    form to input the new task
+        input and submit button-->
+    <div class="inp">
+        <form>
+            <input type="text" placeholder="What you want to do..." id="iputext">
+            <input type="button" value="submit" id="ipusubmit">
+        </form>
+    </div>
+<!--    list that reprsent the tasks.
+        with 3 status, going, none, done,
+        also has the checkbox for detrmind the status,
+        and delete button for delete the tasks-->
+    <ul>
+        <li>
+            <input type="checkbox" name="task" id="1">
+            <p>do my Homework</p>
+            <img src="delete.png">
+        </li>
+        <li>
+            <input type="checkbox" name="task" id="2">
+            <p>do my Homework</p>
+            <img src="delete.png">
+        </li>
+        <li>
+            <input type="checkbox" name="task" id="3">
+            <p>do my Homework</p>
+            <img src="delete.png">
+        </li>
+    </ul>
+</section>
+<script src="index.ts"></script>
+</body>
+</html>
