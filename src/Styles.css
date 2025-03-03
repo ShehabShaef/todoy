@@ -52,6 +52,8 @@ section {
 /*the input styles*/
 /*    the background styles*/
 .inp{
+    display: flex;
+    flex-direction: column;
     width: 75%;
     height: fit-content;
     background-color: #CED5DD;
@@ -64,14 +66,6 @@ section {
     box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 25%);
 }
 
-.inp:active{
-    transform: scale(99%);
-}
-/* center the items*/
-form{
-    display: flex;
-    flex-direction: column;
-}
 /*the input text styles*/
 #iputext{
     width: 100%;
@@ -93,11 +87,15 @@ form{
     background: #243b55;
     color: white;
     font-size: 1rem;
-    transition: background-color 1s ease;
+    transition: background-color 1s ease, transform 0.2s linear;
 }
 
 #ipusubmit:hover {
     background-color: #141e30;
+}
+
+#ipusubmit:active{
+    transform: scale(98%);
 }
 /*the  list of task*/
 
@@ -124,10 +122,10 @@ li {
 li:hover{
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 25%);
 }
-lI:active{
+li:active{
     transform: scale(99%);
 }
-li p {
+li span {
     flex-grow: 2;
 }
 .delete {
@@ -140,4 +138,12 @@ li p {
     padding: 1rem;
     width: 1rem;
     height: 1rem;
+}
+
+.tsk-completed{
+    text-decoration: line-through;
+}
+
+.tsk-in-progress{
+    text-decoration: underline;
 }
