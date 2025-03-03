@@ -13,7 +13,12 @@ body {
 }
 
 html{
-    font-family: "Saira",Serif;
+    font-family: "Saira", serif;
+}
+
+/* Width and height of the scrollbar */
+::-webkit-scrollbar {
+    display: none;
 }
 
 /*the main card styles*/
@@ -30,16 +35,20 @@ section {
 }
 
 /*the title styles*/
-.title{
+.title {
     color: white;
     font-size: 2rem;
     display: inline-block;
     padding: 0.7rem 1.3rem;
-    background-color: #243b55;
+    background: #243b55; /* Solid color */
     border-radius: 24px;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    transition: background-color 1s ease;
 }
 
+.title:hover {
+    background-color: #141e30;
+}
 /*the input styles*/
 /*    the background styles*/
 .inp{
@@ -48,7 +57,15 @@ section {
     background-color: #CED5DD;
     border-radius: 12px;
     padding: 1rem;
-    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 25%); /* Todo: make it dynmic when it hoverd*/
+    transition: box-shadow 0.2s linear , transform 0.2s linear;
+}
+
+.inp:hover{
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 25%);
+}
+
+.inp:active{
+    transform: scale(99%);
 }
 /* center the items*/
 form{
@@ -61,9 +78,8 @@ form{
     margin-right: auto;
     border: none;
     background: none;
-    font-family: "Saira", Serif;
+    font-family: "Saira", serif;
     font-size: 1rem;
-    color: rgba(45, 45, 45, 0.38);
 }
 #iputext:focus-visible{
     outline: none;
@@ -72,10 +88,56 @@ form{
 #ipusubmit{
     margin-left: auto;
     border: none;
-    padding: 1rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 3rem;
     background: #243b55;
     color: white;
     font-size: 1rem;
+    transition: background-color 1s ease;
 }
 
+#ipusubmit:hover {
+    background-color: #141e30;
+}
+/*the  list of task*/
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    width: 80%;
+    overflow: scroll;
+    flex-grow: 2;
+    padding: 0.3rem;
+
+}
+
+li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    transition: box-shadow 0.2s linear, transform 0.2s linear;
+}
+
+li:hover{
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 25%);
+}
+lI:active{
+    transform: scale(99%);
+}
+li p {
+    flex-grow: 2;
+}
+.delete {
+    padding: 1rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.check {
+    padding: 1rem;
+    width: 1rem;
+    height: 1rem;
+}
